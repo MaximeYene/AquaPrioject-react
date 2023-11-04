@@ -32,6 +32,7 @@ function Cart({ cart, updateCart }) {
 					<h3>Total :{total}€</h3>
 					{/* <button><a target='blank' href='https://wa.me/00237691673169?text=Bienvenue%20dans%20notre%20de%20vente.%20Nous%20sommes%20a%20vous%20dans%20quelques%20instants'>Valider mon panier</a></button> */}
 					<button onClick={() => updateCart([])}>Vider le panier</button>
+					<button><a href='https://wa.me/699077977?text=Bonjour%20et%20bienvenue%20sur%20notre%20plateforme.%20Nous%20%vous%20repondons%20dans%20quelques%20instants.'>Valider mon panier</a></button>
 				</div>
 			) : (
 				<div>Votre panier est vide</div>

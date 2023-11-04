@@ -15,10 +15,11 @@
 	position: relative;
 }
 
+
 .lmj-plant-item-price {
 	position: absolute;
 	border-radius: 20px 20px 20px 0;
-	background-color: #31b472;
+	background-color: #4DB7FE;
 	color: white;
 	padding: 15px;
 	right: 0;
