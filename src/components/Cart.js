@@ -40,7 +40,7 @@ function Cart({ cart, updateCart }) {
 					<h3>Total :{total}€</h3>
 					<div className='button-part'>
 					<Button variant='outlined' sx={{borderColor:'#fff'}} endIcon={<SendIcon />}><a target='blank' href='https://wa.me/+237699077977?text=Bienvenue%20dans%20notre%20plateforme%20de%20vente.%20Nous%20sommes%20a%20vous%20dans%20quelques%20instants'>Valider panier</a></Button>
-					<Button variant='outlined' className='bp-second-button' sx={{color:'#fff', borderColor:'#fff'}} endIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider panier</Button>
+					<Button variant='outlined' sx={{color:'#fff', borderColor:'#fff'}} endIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider panier</Button>
 					</div>
 				</div>
 			) : (

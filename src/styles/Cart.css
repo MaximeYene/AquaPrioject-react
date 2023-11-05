@@ -33,7 +33,7 @@ Button a{
 		margin-top: 10%;
 	}
 	.cart-list h2{
-		font-size: x-small;
+		font-size: 10px;
 	}
 	.cart-list ul{
 		font-size: xx-small;
@@ -41,7 +41,7 @@ Button a{
 	.button-part a{
 		font-size: xx-small;
 	}
-	.bp-second-button{
+	button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.css-1ane4u2-MuiButtonBase-root-MuiButton-root {
 		font-size: xx-small;
 	}
 }
