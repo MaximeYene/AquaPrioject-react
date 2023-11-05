@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send'
 import queryString from 'query-string'
 
 
-function Cart({ cart, updateCart }) {
+function Cart({ cart, updateCart}) {
 	const [isOpen, setIsOpen] = useState(true)
 	const total = cart.reduce(
 		(acc, plantType) => acc + plantType.amount * plantType.price,
@@ -17,9 +17,11 @@ function Cart({ cart, updateCart }) {
 	}, [total])
 
 	const envoyerWhatsapp=()=>{
-		const listeAchats=cart.join(', ');
-		const queryParams=queryString.stringify({achats:listeAchats});
-		const url=`https://wa.me/+237699077977?text=${encodeURIComponent(queryParams)}`;
+		const listeAchats=cart.map(({name, price, amount})=>{
+			return `${name} ${price}Fcfa * ${amount}`
+		}).join(', ');
+		const queryParams=queryString.stringify({listeAchats});
+		const url=`https://wa.me/+237699077977?text=Bonjour.%20Jaimerais%20acheter:${queryParams}`;
 		window.open(url, '_blank');
 	}
 
