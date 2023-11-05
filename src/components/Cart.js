@@ -21,7 +21,7 @@ function Cart({ cart, updateCart}) {
 			return `${name} ${price}Fcfa * ${amount}`
 		}).join(', ');
 		const queryParams=queryString.stringify({listeAchats});
-		const url=`https://wa.me/+237699077977?text=Bonjour.%20Jaimerais%20acheter:${queryParams}`;
+		const url=`https://wa.me/+237699077977?text=Bonjour.%20Jaimerais%20acheter%20les%20articles%20suivants:\n${queryParams}`;
 		window.open(url, '_blank');
 	}
 
