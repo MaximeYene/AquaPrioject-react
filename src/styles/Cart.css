@@ -41,7 +41,7 @@ Button a{
 	.button-part a{
 		font-size: xx-small;
 	}
-	button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.css-1ane4u2-MuiButtonBase-root-MuiButton-root {
+	.button-part Button{
 		font-size: xx-small;
 	}
 }
