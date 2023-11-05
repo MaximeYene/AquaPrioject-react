@@ -19,7 +19,7 @@ function Cart({ cart, updateCart}) {
 	const envoyerWhatsapp=()=>{
 		const intro='Bonjour. Jaimerais valider ma commande pour achat de:\n '
 		const listeAchats=cart.map(({name, price, amount},index)=>{
-			return <li key={`${name}-${index}`}>
+			<li key={`${name}-${index}`}>
 				{name} {price}Fcfa x {amount}
 			</li>
 		});
