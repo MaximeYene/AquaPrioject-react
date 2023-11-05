@@ -1,26 +1,35 @@
 import '../styles/Categories.css'
-import { Button } from '@mui/material'
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Box from '@mui/material/Box';
+import * as React from 'react';
+import '../styles/Categories.css'
 
-function Categories({ setActiveCategory, categories, activeCategory }) {
+function Categories() {
+	const [categories,setCategories] = React.useState('');
+
+	const handleChange = (event) => {
+	  setCategories(event.target.value);
+	};
+  
 	return (
-		<div className='lmj-categories'>
-			<FormControl sx={{ minWidth: 150 }}>
-				<InputLabel>Categories</InputLabel>
-				<Select
-					value={activeCategory}
-					onChange={(e) => setActiveCategory(e.target.value)}
-					className='lmj-categories-select'
-				>
-					<MenuItem>Nos Produits</MenuItem>
-					<MenuItem>Poissons</MenuItem>
-				</Select>
-			</FormControl>
-			<Button variant='contained' onClick={() => setActiveCategory('')}>Réinitialiser</Button>
-		</div>
+	  <Box>
+		<FormControl sx={{width:150}} className='lmj-categories' >
+		  <InputLabel id="demo-simple-select-label">categories</InputLabel>
+		  <Select
+			labelId="demo-simple-select-label"
+			value={categories}
+			id="demo-simple-select"
+			label="categories"
+			onChange={handleChange}
+		  >
+			<MenuItem>Aliments pour poissons et vitamines</MenuItem>
+			<MenuItem>Poissons frais en vente et plantes</MenuItem>
+		  </Select>
+		</FormControl>
+	  </Box>
 	)
 }
 

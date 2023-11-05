@@ -1,8 +1,5 @@
-.lmj-categories {
-	text-align: center;
-	padding-top: 30px;
-}
-
-.lmj-categories-select {
-	margin-right: 15px;
+.MuiBox-root.css-0 {
+    padding-top: 2%;
+	display: flex;
+    justify-content: center;
 }
