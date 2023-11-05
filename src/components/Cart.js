@@ -28,19 +28,20 @@ function Cart({ cart, updateCart }) {
 				Fermer
 			</Button>
 			{cart.length > 0 ? (
-				<div>
+				<div className='cart-list'>
 					<h2>Mon panier</h2>
 					<ul>
 						{cart.map(({ name, price, amount }, index) => (
 							<div key={`${name}-${index}`}>
-								{name} {price}€ x {amount}
+								{name} {price}Fcfa x {amount}
 							</div>
 						))}
 					</ul>
 					<h3>Total :{total}€</h3>
-					<Button variant='outlined' endIcon={<SendIcon />}><a target='blank' href='https://wa.me/00237699077977?text=Bienvenue%20dans%20notre%20plateforme%20de%20vente.%20Nous%20sommes%20a%20vous%20dans%20quelques%20instants'>Valider mon panier</a></Button>
-					<Button variant='outlined' sx={{color:'#fff'}} startIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider le panier</Button>
-
+					<div className='button-part'>
+					<Button variant='outlined' sx={{borderColor:'#fff'}} endIcon={<SendIcon />}><a target='blank' href='https://wa.me/+237699077977?text=Bienvenue%20dans%20notre%20plateforme%20de%20vente.%20Nous%20sommes%20a%20vous%20dans%20quelques%20instants'>Valider mon panier</a></Button>
+					<Button variant='outlined' sx={{color:'#fff', borderColor:'#fff'}} startIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider le panier</Button>
+					</div>
 				</div>
 			) : (
 				<div>Votre panier est vide</div>

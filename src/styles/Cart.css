@@ -38,3 +38,10 @@ Button a{
 	text-decoration: none;
 	color: #fff;
 }
+.cart-list{
+	margin-top: 2%;
+	position: fixed;
+}
+.button-part{
+	display: grid;
+}
