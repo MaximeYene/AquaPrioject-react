@@ -18,9 +18,11 @@ function Cart({ cart, updateCart}) {
 
 	const envoyerWhatsapp=()=>{
 		const intro='Bonjour. Jaimerais valider ma commande pour achat de:\n '
-		const listeAchats=cart.map(({name, price, amount})=>{
-			return `${name} ${price}Fcfa x ${amount}`
-		}).join(', ');
+		const listeAchats=cart.map(({name, price, amount},index)=>{
+			return <li key={`${name}-${index}`}>
+				{name} {price}Fcfa x {amount}
+			</li>
+		});
 		const queryParams=queryString.stringify({listeAchats});
 		const url=`https://wa.me/+237699077977?text=${intro} ${queryParams}`;
 		window.open(url, '_blank');
@@ -41,13 +43,13 @@ function Cart({ cart, updateCart}) {
 			{cart.length > 0 ? (
 				<div className='cart-list'>
 					<h2>Mon panier</h2>
-					<ul>
+					<div>
 						{cart.map(({ name, price, amount }, index) => (
 							<div key={`${name}-${index}`}>
 								{name} {price}Fcfa x {amount}
 							</div>
 						))}
-					</ul>
+					</div>
 					<h3>Total :{total}Fcfa</h3>
 					<div className='button-part'>
 					<Button variant='outlined' sx={{borderColor:'#fff'}} endIcon={<SendIcon />} onClick={envoyerWhatsapp} >Valider panier</Button>

@@ -5,6 +5,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	width: 300px;
+	padding: 1%;
 }
 
 .lmj-cart-closed {
@@ -35,7 +36,7 @@ Button a{
 	.cart-list h2{
 		font-size: 18px;
 	}
-	.cart-list ul{
+	.cart-list div{
 		font-size: xx-small;
 	}
 	.button-part a{
