@@ -3,6 +3,7 @@ import { plantList } from '../datas/PlantList'
 import PlantItem from './PlantItem'
 import Categories from './Categories'
 import '../styles/ShoppingList.css'
+import { Button } from '@mui/material'
 
 function ShoppingList({ cart, updateCart }) {
 	const [activeCategory, setActiveCategory] = useState('')
@@ -46,7 +47,7 @@ function ShoppingList({ cart, updateCart }) {
 								light={light}
 								price={price}
 							/>
-							<button onClick={() => addToCart(name, price)}>Ajouter</button>
+							<Button variant='outlined' onClick={() => addToCart(name, price)}>Ajouter</Button>
 						</div>
 					) : null
 				)}

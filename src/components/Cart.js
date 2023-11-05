@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 import '../styles/Cart.css'
+import { Button } from '@mui/material'
+import DeleteIcon from '@mui/icons-material/Delete'
+import SendIcon from '@mui/icons-material/Send'
+
 
 function Cart({ cart, updateCart }) {
 	const [isOpen, setIsOpen] = useState(true)
@@ -30,9 +34,9 @@ function Cart({ cart, updateCart }) {
 						))}
 					</ul>
 					<h3>Total :{total}€</h3>
-					{/* <button><a target='blank' href='https://wa.me/00237691673169?text=Bienvenue%20dans%20notre%20de%20vente.%20Nous%20sommes%20a%20vous%20dans%20quelques%20instants'>Valider mon panier</a></button> */}
-					<button onClick={() => updateCart([])}>Vider le panier</button>
-					<button><a href='https://wa.me/699077977?text=Bonjour%20et%20bienvenue%20sur%20notre%20plateforme.%20Nous%20%vous%20repondons%20dans%20quelques%20instants.'>Valider mon panier</a></button>
+					<Button><a target='blank' variant='contained' endIcon={<SendIcon/>} href='https://wa.me/00237699077977?text=Bienvenue%20dans%20notre%20plateforme%20de%20vente.%20Nous%20sommes%20a%20vous%20dans%20quelques%20instants'>Valider mon panier</a></Button>
+					<Button variant='contained' startIcon={<DeleteIcon/>} onClick={() => updateCart([])}>Vider le panier</Button>
+					
 				</div>
 			) : (
 				<div>Votre panier est vide</div>
