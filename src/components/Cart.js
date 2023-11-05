@@ -18,13 +18,13 @@ function Cart({ cart, updateCart}) {
 
 	const envoyerWhatsapp=()=>{
 		const intro='Bonjour. Jaimerais valider ma commande pour achat de:\n '
-		const listeAchats=cart.map(({name, price, amount},index)=>(
-			<li key={`${name}-${index}`}>
-				{name} {price}Fcfa x {amount}
-			</li>
-		));
-		const queryParams=queryString.stringify({listeAchats});
-		const url=`https://wa.me/+237699077977?text=${intro} ${queryParams}`;
+		const listeAchats=[];
+		for(let i=0; i<cart.length; i++){
+			const {name, price, amount}=cart[i];
+			listeAchats.push(`${name} ${price}Fcfa x ${amount}`);
+		}
+		const queryParams=queryString.stringify({texte:`${intro} ${listeAchats.join('\n')}`});
+		const url=`https://wa.me/+237699077977?text=${queryParams}`;
 		window.open(url, '_blank');
 	}
 
