@@ -12,7 +12,7 @@ function Cart({ cart, updateCart }) {
 		0
 	)
 	useEffect(() => {
-		document.title = `LMJ: ${total}€ d'achats`
+		document.title = `LMJ: ${total}Fcfa d'achats`
 	}, [total])
 
 	return isOpen ? (
