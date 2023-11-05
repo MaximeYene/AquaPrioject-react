@@ -3,6 +3,7 @@ import '../styles/Cart.css'
 import { Button } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import SendIcon from '@mui/icons-material/Send'
+import queryString from 'query-string'
 
 
 function Cart({ cart, updateCart }) {
@@ -14,6 +15,12 @@ function Cart({ cart, updateCart }) {
 	useEffect(() => {
 		document.title = `LMJ: ${total}Fcfa d'achats`
 	}, [total])
+
+	const envoyerWhatsapp=()=>{
+		const queryParams=queryString.stringify({achats:cart});
+		const url=`https://wa.me/+237699077977?text=${encodeURIComponent(queryParams)}`;
+		window.open(url, '_blank');
+	}
 
 	return isOpen ? (
 		<div className='lmj-cart'>
@@ -37,9 +44,9 @@ function Cart({ cart, updateCart }) {
 							</div>
 						))}
 					</ul>
-					<h3>Total :{total}€</h3>
+					<h3>Total :{total}Fcfa</h3>
 					<div className='button-part'>
-					<Button variant='outlined' sx={{borderColor:'#fff'}} endIcon={<SendIcon />}><a target='blank' href='https://wa.me/+237699077977?text=Bonjour.%20Jaimerais%20commander:%20'>Valider panier</a></Button>
+					<Button variant='outlined' sx={{borderColor:'#fff'}} endIcon={<SendIcon />} onClick={envoyerWhatsapp} >Valider panier</Button>
 					<Button variant='outlined' sx={{color:'#fff', borderColor:'#fff'}} endIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider panier</Button>
 					</div>
 				</div>
