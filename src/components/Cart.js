@@ -6,6 +6,7 @@ import SendIcon from '@mui/icons-material/Send'
 import queryString from 'query-string'
 
 
+
 function Cart({ cart, updateCart}) {
 	const [isOpen, setIsOpen] = useState(true)
 	const total = cart.reduce(
@@ -23,7 +24,7 @@ function Cart({ cart, updateCart}) {
 			const {name, price, amount}=cart[i];
 			listeAchats.push(`${name} ${price}Fcfa x ${amount}`);
 		}
-		const queryParams=queryString.stringify({`${intro} ${listeAchats.join('\n')}`});
+		const queryParams=queryString.stringify(`${intro} ${listeAchats.join('\n')}`);
 		const url=`https://wa.me/+237699077977?text=${queryParams}`;
 		window.open(url, '_blank');
 	}
@@ -52,8 +53,8 @@ function Cart({ cart, updateCart}) {
 					</div>
 					<h3>Total :{total}Fcfa</h3>
 					<div className='button-part'>
-					<Button variant='outlined' sx={{borderColor:'#fff'}} endIcon={<SendIcon />} onClick={envoyerWhatsapp} >Valider panier</Button>
-					<Button variant='outlined' sx={{color:'#fff', borderColor:'#fff'}} endIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider panier</Button>
+					<Button variant='contained' sx={{color: '#fff'}} endIcon={<SendIcon />} onClick={envoyerWhatsapp} >Valider panier</Button>
+					<Button variant='contained' sx={{color:'#fff'}} endIcon={<DeleteIcon />} onClick={() => updateCart([])}>Vider panier</Button>
 					</div>
 				</div>
 			) : (

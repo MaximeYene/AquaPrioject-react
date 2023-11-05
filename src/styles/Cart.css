@@ -16,12 +16,11 @@
 	color: black;
 }
 
-Button a{
-	text-decoration: none;
-	color: #fff;
+ .button-part Button{
+	margin-bottom: 2%;
 }
 .cart-list{
-	margin-top: 2%;
+	margin-top: 5%;
 	position: fixed;
 }
 .button-part{
