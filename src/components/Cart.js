@@ -17,11 +17,12 @@ function Cart({ cart, updateCart}) {
 	}, [total])
 
 	const envoyerWhatsapp=()=>{
+		const intro='Bonjour. Jaimerais valider ma commande pour achat de:\n '
 		const listeAchats=cart.map(({name, price, amount})=>{
 			return `${name} ${price}Fcfa * ${amount}`
 		}).join(', ');
 		const queryParams=queryString.stringify({listeAchats});
-		const url=`https://wa.me/+237699077977?text=Bonjour.%20Jaimerais%20acheter%20les%20articles%20suivants:\n${queryParams}`;
+		const url=`https://wa.me/+237699077977?text=${intro} ${queryParams}`;
 		window.open(url, '_blank');
 	}
 
