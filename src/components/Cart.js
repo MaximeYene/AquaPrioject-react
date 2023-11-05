@@ -17,7 +17,8 @@ function Cart({ cart, updateCart }) {
 	}, [total])
 
 	const envoyerWhatsapp=()=>{
-		const queryParams=queryString.stringify({achats:cart});
+		const listeAchats=cart.join();
+		const queryParams=queryString.stringify({achats:listeAchats});
 		const url=`https://wa.me/+237699077977?text=${encodeURIComponent(queryParams)}`;
 		window.open(url, '_blank');
 	}
