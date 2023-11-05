@@ -1,7 +1,6 @@
 .lmj-cart {
 	color: white;
 	background-color: #4DB7FE;
-	padding: 1%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -40,6 +39,9 @@ Button a{
 		font-size: xx-small;
 	}
 	.button-part a{
+		font-size: xx-small;
+	}
+	.bp-second-button{
 		font-size: xx-small;
 	}
 }
