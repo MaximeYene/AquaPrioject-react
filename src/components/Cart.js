@@ -24,7 +24,7 @@ function Cart({ cart, updateCart}) {
 			const {name, price, amount}=cart[i];
 			listeAchats.push(`${name} ${price}Fcfa x ${amount}`);
 		}
-		const queryParams=queryString.stringify(`${intro} ${listeAchats.join('\n')}`);
+		const queryParams=queryString.stringify({ValidationDeCommande:`\n${intro} ${listeAchats.join('\n')}`});
 		const url=`https://wa.me/+237699077977?text=${queryParams}`;
 		window.open(url, '_blank');
 	}
