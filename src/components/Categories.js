@@ -16,13 +16,13 @@ function Categories() {
   
 	return (
 	  <Box>
-		<FormControl sx={{width:150}} className='lmj-categories' >
-		  <InputLabel id="demo-simple-select-label">categories</InputLabel>
+		<FormControl sx={{width:200}} className='lmj-categories' >
+		  <InputLabel id="demo-simple-select-label">Toutes les categories</InputLabel>
 		  <Select
 			labelId="demo-simple-select-label"
 			value={categories}
 			id="demo-simple-select"
-			label="categories"
+			label="Toutes les categories"
 			onChange={handleChange}
 		  >
 			<MenuItem>Aliments pour poissons et vitamines</MenuItem>
@@ -30,6 +30,7 @@ function Categories() {
 		  </Select>
 		</FormControl>
 	  </Box>
+	  
 	)
 }
 

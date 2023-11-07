@@ -16,15 +16,22 @@
 	color: black;
 }
 
- .button-part Button{
-	margin-bottom: 2%;
-}
 .cart-list{
 	margin-top: 5%;
 	position: fixed;
 }
+
+.cart-list-product{
+	font-size: 14px;
+}
 .button-part{
 	display: grid;
+}
+
+.button-part Button{
+	margin-bottom: 2%;
+	max-width: 200px;
+	min-width: 150px;
 }
 
 @media screen and (max-width:767px) {

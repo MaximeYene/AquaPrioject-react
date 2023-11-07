@@ -44,7 +44,7 @@ function Cart({ cart, updateCart}) {
 			{cart.length > 0 ? (
 				<div className='cart-list'>
 					<h2>Mon panier</h2>
-					<div>
+					<div className='cart-list-product' >
 						{cart.map(({ name, price, amount }, index) => (
 							<div key={`${name}-${index}`}>
 								{name} {price}Fcfa x {amount}
