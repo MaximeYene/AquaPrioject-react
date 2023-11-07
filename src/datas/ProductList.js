@@ -32,7 +32,7 @@ export const productList = [
 		category: 'classique',
 		id: '3sd',
 		cover: BlueCrown4mm,
-		price: 916500
+		price: 16500
 	},
 	{
 		name: 'BlueCrown 6mm',
@@ -93,7 +93,7 @@ export const productList = [
 		price:12000
 	},
 	{
-		name: 'Bleu de Méthylène(antifongique)',
+		name: 'Bleu de Méthylène',
 		id:'12cf',
 		cover: BleuDeMethylene,
 		price:10000
