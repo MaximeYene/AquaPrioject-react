@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import '../styles/Cart.css'
 import { Button } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -8,7 +8,6 @@ import queryString from 'query-string'
 
 
 function Cart({ cart, updateCart}) {
-	const [isOpen, setIsOpen] = useState(true)
 	const total = cart.reduce(
 		(acc, plantType) => acc + plantType.amount * plantType.price,
 		0
@@ -29,18 +28,8 @@ function Cart({ cart, updateCart}) {
 		window.open(url, '_blank');
 	}
 
-	return isOpen ? (
+	return(
 		<div className='lmj-cart'>
-			<Button
-				variant='outlined'
-				sx={{
-					width: 'max-content',
-					float: 'right'
-				}}
-				onClick={() => setIsOpen(false)}
-			>
-				Fermer
-			</Button>
 			{cart.length > 0 ? (
 				<div className='cart-list'>
 					<h2>Mon panier</h2>
@@ -60,15 +49,6 @@ function Cart({ cart, updateCart}) {
 			) : (
 				<div>Votre panier est vide</div>
 			)}
-		</div>
-	) : (
-		<div className='lmj-cart-closed'>
-			<Button
-				variant='outlined'
-				onClick={() => setIsOpen(true)}
-			>
-				Ouvrir le Panier
-			</Button>
 		</div>
 	)
 }
