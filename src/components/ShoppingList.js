@@ -38,14 +38,12 @@ function ShoppingList({ cart, updateCart }) {
 			/>
 
 			<ul className='lmj-plant-list'>
-				{productList.map(({ id, cover, name, water, light, price, category }) =>
+				{productList.map(({ id, cover, name, price, category }) =>
 					!activeCategory || activeCategory === category ? (
 						<div key={id} className='lmj-plant-list-part'>
 							<PlantItem
 								cover={cover}
 								name={name}
-								water={water}
-								light={light}
 								price={price}
 							/>
 							<Button variant='outlined' endIcon={<AddShoppingCart/>} onClick={() => addToCart(name, price) }>Ajouter</Button>

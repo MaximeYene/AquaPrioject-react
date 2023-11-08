@@ -9,11 +9,20 @@
 	align-items: center;
 }
 
-.lmj-title {
-	padding-left: 32px;
+.lmj-title-water{
+	color: #4DB7FE;
 }
 
+
 .lmj-logo {
-	height: 45px;
-	width: 45px;
+	height: 85px;
+	width: 85px;
+}
+
+
+
+@media screen and (max-width:767px) {
+	.lmj-banner{
+		padding: 15px;
+	}
 }

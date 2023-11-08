@@ -13,7 +13,7 @@ function Cart({ cart, updateCart}) {
 		0
 	)
 	useEffect(() => {
-		document.title = `LMJ: ${total}Fcfa d'achats`
+		document.title = `WaterDrop: ${total}Fcfa d'achats`
 	}, [total])
 
 	const envoyerWhatsapp=()=>{
