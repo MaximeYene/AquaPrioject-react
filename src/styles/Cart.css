@@ -34,15 +34,11 @@
 @media screen and (max-width:767px) {
 	.cart-list{
 		margin-top: 10%;
-		position: static;
 	}
 	.cart-list h2{
 		font-size: 18px;
 	}
 	.cart-list div{
-		font-size: xx-small;
-	}
-	.button-part a{
 		font-size: xx-small;
 	}
 	.button-part Button{
